@@ -1,0 +1,42 @@
+{
+  "name": "text-word-frequency",
+  "version": "0.0.2",
+  "description": "",
+  "main": "main",
+  "preferGlobal": true,
+  "bin": {
+    "word-frequency": "main.js"
+  },
+  "scripts": {
+    "test": "node main.js -i sample/kafka.txt -d sample/dic.txt",
+    "publish": "npm publish",
+    "update-locally": "npm i . -g",
+    "test-installed": "word-frequency -i sample/kafka.txt -d sample/dic.txt",
+    "test-help-without-anything": "word-frequency",
+    "test-help": "word-frequency --help",
+    "test-installed-without-dic": "word-frequency -i sample/kafka.txt"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dosuser/word-frequency.git"
+  },
+  "files" : [
+    "dum.js"
+    ,"main.js"
+  ],
+  "keywords": [
+    "frequency",
+    "nlp",
+    "dictionary"
+  ],
+  "author": "dosuser <dosuser00@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dosuser/word-frequency/issues"
+  },
+  "homepage": "https://github.com/dosuser/word-frequency#readme",
+  "dependencies": {
+    "commander": "^4.0.1"
+  }
+}

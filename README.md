@@ -1,0 +1,53 @@
+<h1>text-word-frequency</h1>
+
+util for memorizing document's keywords.
+
+you can get sample well-known-word dictionary in this project github.     
+
+``` 
+> npm i text-word-frequency -g
+> word-frequency -i sample/kafka.txt -d sample/dic.txt
+
+kafka	1187
+broker	581
+consumer	554
+sasl	368
+ssl	337
+producer	319
+metrics	299
+brokers	286
+streams	283
+partition	256
+protocol	214
+connector	208
+zookeeper	192
+offset	184
+clients	177
+records	177
+topics	163
+security	153
+partitions	153
+replicas	152
+null	141
+replication	123
+```
+
+Help
+```text
+> word-frequency --help
+
+Usage: main [options]
+
+count word frequency in stdin or file
+
+Options:
+  -d, --dictionary <dic>       dictionary file to exclude from the result (line 
+                               separated, single word)
+  -i, --inputFile <inputFile>  input text file, 
+  -h, --help                   output usage information
+```
+ 
+```text
+> word-frequency -i sample/kafka.txt
+
+```
