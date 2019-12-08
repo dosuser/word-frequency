@@ -59,6 +59,7 @@ six
 
 
 <h3>Help</h3>
+
 ```text
 > word-frequency --help
 
