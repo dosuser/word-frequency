@@ -1,7 +1,7 @@
 {
   "name": "text-word-frequency",
-  "version": "0.0.3",
-  "description": "",
+  "version": "0.0.4",
+  "description": "word frequency command line utility.",
   "main": "main",
   "preferGlobal": true,
   "bin": {
