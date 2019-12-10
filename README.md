@@ -44,10 +44,13 @@ replication	123
 
 <h3>dictionary format</h3>
 we accept just first word, so tsv(tab separated value), space is allowed.
+
 ```text
 word (whitespace+?) anyting...
 ```
+
 example
+
 ```text
 one 
 two i hate this number
