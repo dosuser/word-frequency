@@ -1,6 +1,6 @@
 {
   "name": "text-word-frequency",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "word frequency command line utility.",
   "main": "main",
   "preferGlobal": true,
@@ -13,17 +13,19 @@
     "update-locally": "npm i . -g",
     "test-installed": "word-frequency -i sample/kafka.txt -d sample/dic.txt",
     "test-help-without-anything": "word-frequency",
+    "test-broken-pipe": "node main.js -i sample/kafka.txt | head -n 10",
+    "test-pause": "node main.js -i sample/kafka.txt | more",
+
     "test-help": "word-frequency --help",
     "test-installed-without-dic": "word-frequency -i sample/kafka.txt"
-
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dosuser/word-frequency.git"
   },
-  "files" : [
-    "dum.js"
-    ,"main.js"
+  "files": [
+    "dum.js",
+    "main.js"
   ],
   "keywords": [
     "frequency",

@@ -45,7 +45,12 @@ function dum(inputStream, dictionary, callback) {
 
 
 function write(stream, data, cb) {
-  if (!stream.write(data)) {
+
+  if(stream.writableFinished == false){
+    return;
+  }
+  if (stream.write(data)) {
+    // success
     // stream.once('drain', function(...args){
     //   cb("dragin", args)
     // });
@@ -68,6 +73,13 @@ function checkRegularFile(filePath){
 }
 
 function createDic(filePath, dic, completeCallback) {
+  process.stdout.on('error', function( err ) {
+    if (err.code == "EPIPE") {
+      // console.error("dosuser", err)
+      // process.exit(1);
+    }
+  });
+
   if(filePath != undefined){
     checkRegularFile(filePath)
     fs.readFile(filePath, 'utf8', function (err, data) {
@@ -78,9 +90,10 @@ function createDic(filePath, dic, completeCallback) {
           continue
         }
         dic[word] = word
-      }
+      }x
       completeCallback(dic)
     });
+
   }else{
     completeCallback(dic)
   }
